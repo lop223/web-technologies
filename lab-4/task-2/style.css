@@ -1,0 +1,36 @@
+* {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+h1 {
+  color: red;
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+ul {
+  list-style: none;
+  border-bottom: 8px green solid;
+  padding-bottom: 30px;
+  margin-left: 26%;
+  margin-right: 26%;
+}
+p {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 14px;
+}
+.bold {
+  font-weight: bold;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.underline {
+  text-decoration: underline;
+}
+.yellow-marked {
+  background-color: yellow;
+}
