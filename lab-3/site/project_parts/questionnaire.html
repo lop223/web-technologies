@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Завдання 3</title>
+	</head>
+	<body>
+		<header>
+			<h1 align="center">Індивідуальне завдання 3:</h1>
+		</header>
+		<main>
+			<center>
+				<div>
+					<h2 align="center">Анкета користувача</h2>
+					<form
+						action="questionnaire.html"
+						method="get"
+						enctype="multipart/form-data"
+					>
+						<fieldset>
+							<legend>Особисті дані</legend>
+							<div>
+								<label for="login">Ім'я:</label>
+								<input
+									type="text"
+									id="login"
+									name="login"
+									placeholder="Введіть свій логін"
+									required
+									tabindex="1"
+								/>
+							</div>
+							<div>
+								<label for="password">Пароль:</label>
+								<input
+									type="password"
+									id="password"
+									name="password"
+									placeholder="Придумайте пароль"
+									autocomplete="off"
+									pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6}"
+									required
+									tabindex="2"
+								/>
+							</div>
+							<div>
+								<label for="email">Пошта:</label>
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="Введіть свою пошту"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+									autocomplete="off"
+									required
+									tabindex="3"
+								/>
+							</div>
+							<div>
+								<label for="number">Телефон:</label>
+								<input
+									type="tel"
+									id="number"
+									name="number"
+									placeholder="+380XXXXXXXXX"
+									pattern="^\+380\d{9}$"
+									required
+									tabindex="4"
+								/>
+							</div>
+							<div>
+								<label for="birth">Дата народження:</label>
+								<input
+									type="date"
+									id="birth"
+									name="birth"
+									required
+									tabindex="5"
+								/>
+							</div>
+							<div><b>Ваша стать?</b></div>
+							<div>
+								<label
+									><input
+										type="radio"
+										name="gender"
+										value="male"
+										tabindex="6"
+									/>Чоловіча</label
+								>
+								<label
+									><input
+										type="radio"
+										name="gender"
+										value="female"
+										tabindex="7"
+									/>Жіноча</label
+								>
+								<label
+									><input
+										type="radio"
+										name="gender"
+										value="other"
+										tabindex="8"
+									/>Інша</label
+								>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>Про себе</legend>
+							<div>
+								<div>
+									<label for="city"><b>Місто</b></label>
+								</div>
+								<select id="city" name="city" tabindex="9">
+									<option>Кропивницький</option>
+									<option>Львів</option>
+									<option selected>Одеса</option>
+									<option>Чернівці</option>
+									<option>Дніпро</option>
+								</select>
+							</div>
+							<div>
+								<div><b>Рівень освіти</b></div>
+								<label
+									><input
+										type="radio"
+										name="education"
+										value="school"
+									/>Школа</label
+								>
+								<label
+									><input
+										type="radio"
+										name="education"
+										value="college"
+										checked
+									/>Коледж</label
+								>
+								<label
+									><input
+										type="radio"
+										name="education"
+										value="university"
+									/>Університет</label
+								>
+							</div>
+							<div>
+								<div><b>Про себе:</b></div>
+								<textarea
+									name="about"
+									rows="4"
+									cols="40"
+									placeholder="Коротко про себе..."
+								></textarea>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>Інтереси</legend>
+							<div>
+								<div><b>Ваші вподобання:</b></div>
+								<div>
+									<label
+										><input type="checkbox" name="interests" value="music" />
+										Музика</label
+									>
+								</div>
+								<div>
+									<label
+										><input type="checkbox" name="interests" value="sports" />
+										Спорт</label
+									>
+								</div>
+								<div>
+									<label
+										><input type="checkbox" name="interests" value="games" />
+										Ігри</label
+									>
+								</div>
+								<div>
+									<label
+										><input
+											type="checkbox"
+											name="interests"
+											value="programing"
+										/>
+										Програмування</label
+									>
+								</div>
+							</div>
+							<div>
+								<div>
+									<label for="languages"
+										><b>Улюблені мови програмування:</b></label
+									>
+								</div>
+								<select
+									id="languages"
+									name="languages"
+									multiple
+									size="6"
+									tabindex="10"
+								>
+									<option>C</option>
+									<option>C++</option>
+									<option>Java</option>
+									<option>Python</option>
+									<option>JavaScript</option>
+									<option>Kotlin</option>
+								</select>
+							</div>
+							<div>
+								<div>
+									<label for="courses"><b>Улюблена дисципліна:</b></label>
+								</div>
+								<select id="courses" name="courses" tabindex="11">
+									<optgroup label="Програмування">
+										<option>Алгоритми</option>
+										<option>ООП</option>
+										<option>Бази даних</option>
+									</optgroup>
+									<optgroup label="Математика">
+										<option>Лінійна алгебра</option>
+										<option>Дискретна математика</option>
+										<option>Теорія ймовірностей</option>
+									</optgroup>
+									<optgroup label="Гуманітарні">
+										<option>Філософія</option>
+										<option>Історія</option>
+										<option>Етика</option>
+									</optgroup>
+									<optgroup label="Інші">
+										<option>Фізкультура</option>
+										<option>Англійська</option>
+										<option>Українська мова</option>
+									</optgroup>
+								</select>
+							</div>
+							<div>
+								<div>
+									<label for="favorite_metal_band"
+										><b>Ваша улюблена метал-група (з підказками):</b></label
+									>
+								</div>
+								<div>
+									<input
+										id="favorite_metal_band"
+										list="metal_bands"
+										name="favorite_metal_band"
+										tabindex="12"
+									/>
+									<datalist id="metal_bands">
+										<option value="Metallica"></option>
+										<option value="Iron Maiden"></option>
+										<option value="Slipknot"></option>
+										<option value="Megadeth"></option>
+										<option value="Sabaton"></option>
+										<option value="Rammstein"></option>
+										<option value="Pantera"></option>
+									</datalist>
+								</div>
+							</div>
+							<div>
+								<div>
+									<label for="audiofiles"
+										><b>Завантажте якусь пісню :)</b></label
+									>
+								</div>
+								<div>
+									<input
+										type="file"
+										name="audiofiles"
+										accept="audio/*"
+										multiple
+									/>
+								</div>
+							</div>
+						</fieldset>
+
+						<fieldset>
+							<legend>Керування формою</legend>
+							<div><input type="submit" value="Надіслати (GET)" /></div>
+							<div><input type="reset" value="Очистити" /></div>
+						</fieldset>
+					</form>
+				</div>
+			</center>
+		</main>
+		<footer>
+			<center>
+				<a href="../index.html"
+					><img src="../img/btn_back.png" alt="back" width="200" height="100"
+				/></a>
+			</center>
+		</footer>
+	</body>
+</html>
