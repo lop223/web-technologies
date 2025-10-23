@@ -1,9 +1,3 @@
-* {
-  font-family: Arial, sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: center;
-}
 h1 {
   color: red;
   font-size: 36px;
@@ -33,4 +27,10 @@ p {
 }
 .yellow-marked {
   background-color: yellow;
+}
+.recipe {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
 }

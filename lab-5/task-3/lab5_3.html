@@ -8,222 +8,232 @@
   </head>
   <body>
     <main>
-      <form
-        action="questionnaire.html"
-        method="get"
-        enctype="multipart/form-data"
-      >
-        <h2>Анкета користувача</h2>
+      <div>
+        <form
+          action="questionnaire.html"
+          method="get"
+          enctype="multipart/form-data"
+        >
+          <h2>Анкета користувача</h2>
 
-        <fieldset>
-          <legend>Особисті дані</legend>
-          <div>
-            <label for="login">Ім'я:</label
-            ><input
-              type="text"
-              id="login"
-              name="login"
-              placeholder="Введіть свій логін"
-              required
-            />
-          </div>
-          <div>
-            <label for="password">Пароль:</label
-            ><input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Придумайте пароль"
-              required
-            />
-          </div>
-          <div>
-            <label for="email">Пошта:</label
-            ><input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Введіть свою пошту"
-              required
-            />
-          </div>
-          <div>
-            <label for="number">Телефон:</label
-            ><input
-              type="tel"
-              id="number"
-              name="number"
-              placeholder="+380XXXXXXXXX"
-              required
-            />
-          </div>
-          <div>
-            <label for="birth">Дата народження:</label
-            ><input type="date" id="birth" name="birth" required />
-          </div>
-          <div><b>Ваша стать?</b></div>
-          <div class="inline-options">
-            <label
-              ><input type="radio" name="gender" value="male" />Чоловіча</label
-            >
-            <label
-              ><input type="radio" name="gender" value="female" />Жіноча</label
-            >
-            <label
-              ><input type="radio" name="gender" value="other" />Інша</label
-            >
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Про себе</legend>
-          <div>
-            <label for="city"><b>Місто</b></label>
-            <select id="city" name="city">
-              <option>Кропивницький</option>
-              <option>Львів</option>
-              <option selected>Одеса</option>
-              <option>Чернівці</option>
-              <option>Дніпро</option>
-            </select>
-          </div>
-          <div><b>Рівень освіти</b></div>
-          <div class="inline-options">
-            <label
+          <fieldset>
+            <legend>Особисті дані</legend>
+            <div>
+              <label for="login">Ім'я:</label
               ><input
-                type="radio"
-                name="education"
-                value="school"
-              />Школа</label
-            >
-            <label
+                type="text"
+                id="login"
+                name="login"
+                placeholder="Введіть свій логін"
+                required
+              />
+            </div>
+            <div>
+              <label for="password">Пароль:</label
               ><input
-                type="radio"
-                name="education"
-                value="college"
-                checked
-              />Коледж</label
-            >
-            <label
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Придумайте пароль"
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Пошта:</label
               ><input
-                type="radio"
-                name="education"
-                value="university"
-              />Університет</label
-            >
-          </div>
-          <div><b>Про себе:</b></div>
-          <textarea
-            name="about"
-            rows="4"
-            placeholder="Коротко про себе..."
-          ></textarea>
-        </fieldset>
-
-        <fieldset>
-          <legend>Інтереси</legend>
-          <div><b>Ваші вподобання:</b></div>
-          <div class="inline-options">
-            <label
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Введіть свою пошту"
+                required
+              />
+            </div>
+            <div>
+              <label for="number">Телефон:</label
               ><input
-                type="checkbox"
-                name="interests"
-                value="music"
-              />Музика</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="interests"
-                value="sports"
-              />Спорт</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="interests"
-                value="games"
-              />Ігри</label
-            >
-            <label
-              ><input
-                type="checkbox"
-                name="interests"
-                value="programing"
-              />Програмування</label
-            >
-          </div>
+                type="tel"
+                id="number"
+                name="number"
+                placeholder="+380XXXXXXXXX"
+                required
+              />
+            </div>
+            <div>
+              <label for="birth">Дата народження:</label
+              ><input type="date" id="birth" name="birth" required />
+            </div>
+            <div><b>Ваша стать?</b></div>
+            <div class="inline-options">
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                />Чоловіча</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                />Жіноча</label
+              >
+              <label
+                ><input type="radio" name="gender" value="other" />Інша</label
+              >
+            </div>
+          </fieldset>
 
-          <div>
-            <label for="languages"><b>Улюблені мови програмування:</b></label>
-            <select id="languages" name="languages" multiple size="6">
-              <option>C</option>
-              <option>C++</option>
-              <option>Java</option>
-              <option>Python</option>
-              <option>JavaScript</option>
-              <option>Kotlin</option>
-            </select>
-          </div>
+          <fieldset>
+            <legend>Про себе</legend>
+            <div>
+              <label for="city"><b>Місто</b></label>
+              <select id="city" name="city">
+                <option>Кропивницький</option>
+                <option>Львів</option>
+                <option selected>Одеса</option>
+                <option>Чернівці</option>
+                <option>Дніпро</option>
+              </select>
+            </div>
+            <div><b>Рівень освіти</b></div>
+            <div class="inline-options">
+              <label
+                ><input
+                  type="radio"
+                  name="education"
+                  value="school"
+                />Школа</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="education"
+                  value="college"
+                  checked
+                />Коледж</label
+              >
+              <label
+                ><input
+                  type="radio"
+                  name="education"
+                  value="university"
+                />Університет</label
+              >
+            </div>
+            <div><b>Про себе:</b></div>
+            <textarea
+              name="about"
+              rows="4"
+              placeholder="Коротко про себе..."
+            ></textarea>
+          </fieldset>
 
-          <div>
-            <label for="courses"><b>Улюблена дисципліна:</b></label>
-            <select id="courses" name="courses">
-              <optgroup label="Програмування">
-                <option>Алгоритми</option>
-                <option>ООП</option>
-                <option>Бази даних</option>
-              </optgroup>
-              <optgroup label="Математика">
-                <option>Лінійна алгебра</option>
-                <option>Дискретна математика</option>
-                <option>Теорія ймовірностей</option>
-              </optgroup>
-              <optgroup label="Гуманітарні">
-                <option>Філософія</option>
-                <option>Історія</option>
-                <option>Етика</option>
-              </optgroup>
-              <optgroup label="Інші">
-                <option>Фізкультура</option>
-                <option>Англійська</option>
-                <option>Українська мова</option>
-              </optgroup>
-            </select>
-          </div>
+          <fieldset>
+            <legend>Інтереси</legend>
+            <div><b>Ваші вподобання:</b></div>
+            <div class="inline-options">
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="music"
+                />Музика</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="sports"
+                />Спорт</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="games"
+                />Ігри</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="interests"
+                  value="programing"
+                />Програмування</label
+              >
+            </div>
 
-          <div>
-            <label for="favorite_metal_band"
-              ><b>Улюблена метал-група:</b></label
-            >
-            <input
-              id="favorite_metal_band"
-              list="metal_bands"
-              name="favorite_metal_band"
-            />
-            <datalist id="metal_bands">
-              <option value="Metallica"></option>
-              <option value="Iron Maiden"></option>
-              <option value="Slipknot"></option>
-              <option value="Megadeth"></option>
-              <option value="Sabaton"></option>
-              <option value="Rammstein"></option>
-              <option value="Pantera"></option>
-            </datalist>
-          </div>
+            <div>
+              <label for="languages"><b>Улюблені мови програмування:</b></label>
+              <select id="languages" name="languages" multiple size="6">
+                <option>C</option>
+                <option>C++</option>
+                <option>Java</option>
+                <option>Python</option>
+                <option>JavaScript</option>
+                <option>Kotlin</option>
+              </select>
+            </div>
 
-          <div>
-            <label for="audiofiles"><b>Завантажте пісню:</b></label>
-            <input type="file" name="audiofiles" accept="audio/*" multiple />
-          </div>
-        </fieldset>
+            <div>
+              <label for="courses"><b>Улюблена дисципліна:</b></label>
+              <select id="courses" name="courses">
+                <optgroup label="Програмування">
+                  <option>Алгоритми</option>
+                  <option>ООП</option>
+                  <option>Бази даних</option>
+                </optgroup>
+                <optgroup label="Математика">
+                  <option>Лінійна алгебра</option>
+                  <option>Дискретна математика</option>
+                  <option>Теорія ймовірностей</option>
+                </optgroup>
+                <optgroup label="Гуманітарні">
+                  <option>Філософія</option>
+                  <option>Історія</option>
+                  <option>Етика</option>
+                </optgroup>
+                <optgroup label="Інші">
+                  <option>Фізкультура</option>
+                  <option>Англійська</option>
+                  <option>Українська мова</option>
+                </optgroup>
+              </select>
+            </div>
 
-        <fieldset>
-          <legend>Керування формою</legend>
-          <input type="submit" value="Надіслати" />
-          <input type="reset" value="Очистити" />
-        </fieldset>
-      </form>
+            <div>
+              <label for="favorite_metal_band"
+                ><b>Улюблена метал-група:</b></label
+              >
+              <input
+                id="favorite_metal_band"
+                list="metal_bands"
+                name="favorite_metal_band"
+              />
+              <datalist id="metal_bands">
+                <option value="Metallica"></option>
+                <option value="Iron Maiden"></option>
+                <option value="Slipknot"></option>
+                <option value="Megadeth"></option>
+                <option value="Sabaton"></option>
+                <option value="Rammstein"></option>
+                <option value="Pantera"></option>
+              </datalist>
+            </div>
+
+            <div>
+              <label for="audiofiles"><b>Завантажте пісню:</b></label>
+              <input type="file" name="audiofiles" accept="audio/*" multiple />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Керування формою</legend>
+            <input type="submit" value="Надіслати" />
+            <input type="reset" value="Очистити" />
+          </fieldset>
+        </form>
+      </div>
     </main>
   </body>
 </html>

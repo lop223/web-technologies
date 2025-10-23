@@ -5,22 +5,22 @@
 ol {
   list-style-position: inside;
 }
-.ul--main {
+.ul-main {
   list-style: circle;
 }
-.ul--main > li > a {
+.ul-main > li > a {
   color: rgb(10, 155, 10);
 }
-.ul--none {
+.ul-none {
   list-style: none;
 }
-.ul--square {
+.ul-square {
   list-style: square;
 }
-.ul--square a {
+.ul-square a {
   text-decoration: none;
 }
-.ul--check-mark {
+.ul-check-mark {
   list-style-image: url("../img/check_mark.png");
 }
 ul > ul > li {
