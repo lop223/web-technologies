@@ -1,0 +1,132 @@
+.main-content {
+  width: 1140px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  padding-left: 10px;
+  overflow: hidden;
+  clear: both;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 10px;
+}
+
+li {
+  margin: 10px;
+}
+
+.ul--row li {
+  float: left;
+}
+
+.block {
+  width: 300px;
+  height: 400px;
+  margin: 1px;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.block img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.block > p {
+  margin-left: 10px;
+}
+
+.block-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 10px;
+  padding: 0px;
+}
+
+.main-content > ul > li:nth-child(1) .ul--row > li:nth-child(1) > .block {
+  background-image: linear-gradient(
+    to left bottom,
+    #ea9b2b,
+    #4353e7,
+    #4353e7,
+    #efec34,
+    #efec34,
+    #1c8907
+  );
+}
+
+.main-content > ul > li:nth-child(1) .ul--row > li:nth-child(2) > .block {
+  background-image: linear-gradient(
+      45deg,
+      green 20%,
+      transparent 25%,
+      transparent 75%,
+      orange 75%,
+      blue 100%
+    ),
+    linear-gradient(
+      45deg,
+      yellow 20%,
+      transparent 25%,
+      transparent 75%,
+      purple 75%,
+      orange 100%
+    );
+  background-size: 100px 100px;
+  background-position: 0px 0px, 50px 50px;
+}
+
+.main-content > ul > li:nth-child(1) .ul--row > li:nth-child(3) > .block {
+  background: repeating-linear-gradient(
+    to left,
+    #fbe606 10%,
+    #3205fa 20%,
+    white 23%,
+    #058f3c 30%
+  );
+}
+
+.main-content > ul > li:nth-child(2) .ul--row > li:nth-child(1) > .block {
+  background-image: linear-gradient(
+      to left top,
+      yellow 35%,
+      transparent 10%,
+      transparent 100%
+    ),
+    linear-gradient(to right top, green 25%, transparent 10%, transparent 100%),
+    linear-gradient(
+      to right bottom,
+      orange 25%,
+      transparent 50%,
+      transparent 70%
+    ),
+    linear-gradient(to left bottom, blue 25%, transparent 60%, transparent 100%);
+}
+
+.main-content > ul > li:nth-child(2) .ul--row > li:nth-child(2) > .block {
+  background-image: linear-gradient(
+      to right top,
+      rebeccapurple 10%,
+      transparent 30%,
+      transparent 90%
+    ),
+    linear-gradient(
+      350deg,
+      hsl(44, 100%, 38%) 0%,
+      hsl(43, 46%, 60%) 5%,
+      hsl(335, 44%, 41%) 16%,
+      hsl(290, 29%, 31%) 24%,
+      hsl(120, 55%, 54%) 32%,
+      hsl(41, 100%, 65%) 39%,
+      hsl(321, 45%, 46%) 47%,
+      hsl(263, 31%, 50%) 56%,
+      hsl(219, 97%, 45%) 64%,
+      hsl(109, 68%, 55%) 73%,
+      hsl(50, 100%, 50%) 82%,
+      hsl(30, 79%, 45%) 91%
+    );
+}

@@ -1,0 +1,30 @@
+.main-content {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  clear: both;
+}
+.main-content > div {
+  margin-top: 30px;
+  column-count: 3;
+  column-width: auto;
+  column-gap: 35px;
+  column-rule: 5px dotted red;
+  text-align: justify;
+}
+.main-content img {
+  width: 200px;
+  margin: 5px;
+  filter: grayscale(100%);
+}
+.img--left {
+  float: left;
+}
+.img--right {
+  float: right;
+}
+.main-content p {
+  margin-block-start: 0em;
+}
