@@ -1,0 +1,189 @@
+.form {
+  width: 620px;
+  height: 500px;
+  border: 20px solid #868686;
+  padding: 0px 20px 20px 20px;
+  background-image: url("../img/form_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  left: 26%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  color: #7d21b3;
+  font-weight: 700;
+  font-style: italic;
+  margin: 20px 20px 5px 20px;
+  position: relative;
+}
+
+h2::first-letter {
+  font-size: 50px;
+  color: magenta;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  margin: 0 auto;
+  height: 2px;
+  width: 300px;
+  background: red;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.underline:hover::after {
+  background: green;
+  width: 340px;
+}
+
+.underline h2.hover {
+  display: none;
+}
+
+.underline:hover h2.start {
+  display: none;
+}
+
+.underline:hover h2.hover {
+  display: block;
+}
+
+.form-row {
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.text-box {
+  margin-top: 20px;
+  color: white;
+  text-align: left;
+  display: block;
+}
+
+.text-box > div {
+  margin-bottom: 5px;
+}
+
+.text-box input,
+.text-box textarea {
+  font-weight: 700;
+  text-indent: 20px;
+  border: none;
+  border-radius: 10px;
+  opacity: 0.6;
+  background-color: #ffffff;
+  width: 250px;
+  height: 30px;
+}
+
+.text-box-text input:hover {
+  border-bottom: 4px solid #fbff00;
+  box-sizing: border-box;
+}
+
+.text-box-text input:focus {
+  border-bottom: 4px solid #ffa600;
+  box-sizing: border-box;
+}
+
+.text-box-password input:hover {
+  border-bottom: 4px solid #1eff00;
+  box-sizing: border-box;
+}
+
+.text-box-password input:focus {
+  border-bottom: 4px solid #00ffea;
+  box-sizing: border-box;
+}
+
+.text-box--left {
+  float: left;
+}
+
+.text-box--right {
+  float: right;
+}
+
+.text-box::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.text-box-about-me textarea {
+  width: 568px;
+  height: 46px;
+  resize: none;
+  padding: 5px;
+}
+
+.text-box-about-me textarea:hover {
+  box-shadow: 4px 4px 10px 10px rgba(233, 27, 154, 0.6);
+}
+
+.text-box-about-me textarea::first-line {
+  color: red;
+}
+
+.button-group {
+  float: left;
+}
+
+.button input {
+  width: 150px;
+  height: 50px;
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+}
+
+.button-reset input {
+  border: 3px solid #e64a19;
+  color: #e64a19;
+}
+
+.button-reset input:hover {
+  border: 3px solid #e64a19;
+  color: white;
+  background-color: #e64a19;
+  border-radius: 15px;
+}
+
+.button-reset input:active {
+  border: 3px solid #ecfd00;
+  background-color: #a02904;
+  border-radius: 25px;
+  position: relative;
+}
+
+.button-send input {
+  border: 3px solid #0097a7;
+  color: #0097a7;
+}
+
+.button-send input:hover {
+  border: 3px solid #0097a7;
+  color: white;
+  background-color: #0097a7;
+  border-radius: 15px;
+}
+
+.button-send input:active {
+  border: 3px solid #ecfd00;
+  color: white;
+  background-color: #014950;
+  border-radius: 25px;
+  position: relative;
+}
