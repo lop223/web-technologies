@@ -40,6 +40,25 @@ h2::first-letter {
   transition: all 0.3s ease;
 }
 
+.line {
+  background-color: red;
+  opacity: 1;
+  width: 120px;
+  height: 3px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.line--left {
+  top: 30px;
+  left: 25px;
+}
+
+.line--right {
+  top: 30px;
+  left: 77%;
+}
+
 .underline:hover::after {
   background: green;
   width: 340px;
@@ -55,6 +74,16 @@ h2::first-letter {
 
 .underline:hover h2.hover {
   display: block;
+}
+
+.underline:hover .line {
+  width: 0px;
+  background-color: green;
+  transition: 0.3s;
+}
+
+.underline:hover .line--left {
+  left: 145px;
 }
 
 .form-row {

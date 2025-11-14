@@ -152,13 +152,14 @@ header .block-2 a:visited {
     background: rgba(255, 255, 255, 0.15);
   }
 }
-
+body {
+  padding-top: 70px;
+}
 main {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-size: 16px;
 
-  padding: 0 10%;
   margin-bottom: 60px;
 
   display: flex;
@@ -166,7 +167,6 @@ main {
 }
 
 main .block-1 {
-  margin: 70px 0;
   padding-left: 3%;
   margin: 50px 0;
 }
@@ -212,9 +212,10 @@ main .block-1 p:nth-child(2) {
 }
 
 @media (max-width: 576px) {
+
   main .block-1 {
     padding-left: 3%;
-    margin: 30px 0;
+    margin: 50px 0;
   }
 
   main .block-1 p:nth-child(1) {
