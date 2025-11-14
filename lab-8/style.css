@@ -1,0 +1,13 @@
+.main-content {
+    text-align: left;
+    margin-left: 2%;
+}
+
+ul {
+    list-style: circle;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
