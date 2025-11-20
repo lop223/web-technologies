@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.main-content {
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-back {
+  text-align: center;
+  width: 99%;
+  top: 90%;
+}
+
+.btn-back img {
+  width: 60px;
+  height: auto;
+}
