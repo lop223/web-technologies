@@ -1,17 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8">
-    <title>Мій сайт</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя сторінка</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Привіт з Pug!</h1>
+      <div class="logo"><img src="img/logo.png" alt="Logo"></div>
+      <input type="checkbox" id="menu-toggle">
+      <label class="burger" for="menu-toggle">
+        <div class="line"></div>
+      </label>
+      <nav class="tub"><a class="option" href="#">Home</a><a class="option" href="#">About</a><a class="option" href="#">Services</a><a class="option" href="#">Contact</a><img src="img/icons/heart.png" alt="Profile">
+      </nav>
     </header>
     <main>
-      <p>Це текст, згенерований з Pug</p>
+      <!-- Variables-->
+      <!-- === DATA ===-->
+      <!-- === BLOCK 1: Slogan ===-->
+      <div class="slogan">
+        <p>WE'RE KEEPSAKE, A DIGITAL &amp; BRANDING AGENCY</p>
+        <p>Specializing in web design, poster, motion video, based in London. We love to turn ideas into beautiful things.</p>
+      </div>
+      <!-- === BLOCK 2: Portfolio ===-->
+      <div class="portfolio">
+        <div class="block-name">
+          <p>OUR AWESOME WORKS </p>
+          <div class="button">FILTER PORTFOLIO</div>
+        </div>
+        <div class="block-content">
+          <div class="card"><img src="img/pictures/1.jpeg"></div>
+          <div class="card"><img src="img/pictures/2.jpeg"></div>
+          <div class="card"><img src="img/pictures/3.jpg"></div>
+          <div class="card"><img src="img/pictures/5.jpeg"></div>
+          <div class="card card--main"><img src="img/pictures/8.jpeg">
+            <div class="circle">
+              <div class="circle-inner"></div>
+              <div class="plus">+</div>
+            </div>
+          </div>
+          <div class="card"><img src="img/pictures/6.jpeg"></div>
+          <div class="card"><img src="img/pictures/7.jpeg"></div>
+          <div class="card"><img src="img/pictures/4.webp"></div>
+          <div class="card"><img src="img/pictures/9.jpeg"></div>
+        </div>
+      </div>
+      <!-- === BLOCK 3: Contact with us ===-->
+      <div class="contacts">
+        <p>WOULD YOU LOVE TO WORK WITH US?</p>
+        <div class="button"><img src="img/icons/mail.png"><span>CONTACT US</span></div>
+      </div>
+      <!-- === BLOCK 4: Services ===-->
+      <div class="services">
+        <div class="block-name">
+          <p>WHAT DO WE DO </p>
+        </div>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna Morbi leo risus, porta ac consectetur ac, vestibulum at ecos</p>
+        <div class="block-content">
+          <div class="card"><img src="img/icons/web-design.png" alt="WEB DESIGN"/>
+            <p class="card-name">WEB DESIGN</p>
+            <p>Donec elit non mi porta gravida eureget metus. Aenean eu leo quam. Pellentesque ornare sem por quam venenatis</p>
+          </div>
+          <div class="card"><img src="img/icons/tv.png" alt="MOTION VIDEO"/>
+            <p class="card-name">MOTION VIDEO</p>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.</p>
+          </div>
+          <div class="card"><img src="img/icons/printer.png" alt="PRINT DESIGN"/>
+            <p class="card-name">PRINT DESIGN</p>
+            <p>Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo.</p>
+          </div>
+          <div class="card"><img src="img/icons/heart.png" alt="ILLUSTRATION"/>
+            <p class="card-name">ILLUSTRATION</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non</p>
+          </div>
+        </div>
+      </div>
+      <!-- === BLOCK 5: Journal ===-->
+      <div class="journal">
+        <div class="block-name">
+          <p>FROM THE JOURNAL</p>
+        </div>
+        <p>Cum sociis natoque penatibus montes nastetur radiculus mus Donec Ulimaper cor faer blantre</p>
+        <div class="block-content">
+          <div class="card"><img src="img/pictures/10.jpg">
+            <div class="card-discription">
+              <p class="card-discription-date">OCT 13, 2014 / IDENTITY</p>
+              <p class="card-discription-name">SOLLICITUDIN TORTOR INCEPTOS</p>
+              <p class="card-discription-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</p>
+            </div>
+          </div>
+          <div class="card"><img src="img/pictures/11.jpg">
+            <div class="card-discription">
+              <p class="card-discription-date">OCT 23, 2014 / BRANDING</p>
+              <p class="card-discription-name">AMET INCEPTOS FRINGILLA FUSCE</p>
+              <p class="card-discription-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</p>
+            </div>
+          </div>
+          <div class="card"><img src="img/pictures/12.jpeg">
+            <div class="card-discription">
+              <p class="card-discription-date">SEP 27, 2014 / BRANDING</p>
+              <p class="card-discription-name">ORNARE CURSUS BIBENDUM PURUS</p>
+              <p class="card-discription-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</p>
+            </div>
+          </div>
+          <div class="card"><img src="img/pictures/13.jpeg">
+            <div class="card-discription">
+              <p class="card-discription-date">SEP 19, 2014 / IDENTITY</p>
+              <p class="card-discription-name">CURSUS MALESUADA JUSTO</p>
+              <p class="card-discription-text">Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer><span>© 2025</span></footer>
+    <footer>
+      <div class="container">
+        <p>2014 Keepsake. All rights. Theme by elemis</p>
+        <div class="media"><img src="img/media/whatsapp.png" alt="WhatsApp"><img src="img/media/facebook.png" alt="Facebook"><img src="img/media/twitter.png" alt="Twitter"><img src="img/media/instagram.png" alt="Instagram"><img src="img/media/pinterest.png" alt="Pinterest"></div>
+      </div>
+    </footer>
   </body>
 </html>

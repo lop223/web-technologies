@@ -1,0 +1,135 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+header {
+  z-index: 10;
+  font-family: $font-raleway;
+  font-size: 16px;
+  width: 100%;
+  height: $header-height;
+  background: #222;
+  color: white;
+
+  @include flex-center(row, space-between, center);
+  padding: 0 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .logo img {
+    width: 160px;
+  }
+
+  .tub {
+    img {
+      width: 20px;
+    }
+    @include flex-center(row, flex-start, center);
+    gap: 40px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: all 0.25s;
+
+      &:hover {
+        color: $color-primary;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      &:visited {
+        color: white;
+      }
+    }
+
+    img {
+      width: 30px;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .burger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 6px;
+    background: transparent;
+    transition: background 0.3s;
+
+    &::before,
+    &::after,
+    .line {
+      content: "";
+      position: absolute;
+      left: 8px;
+      width: 24px;
+      height: 3px;
+      background: white;
+    }
+
+    &::before {
+      top: 12px;
+    }
+
+    .line {
+      top: 18px;
+    }
+
+    &::after {
+      top: 24px;
+    }
+  }
+
+  @include respond-to(tablet) {
+    .burger {
+      display: block;
+    }
+
+    .tub {
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background: #222;
+
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      gap: 0;
+
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+
+      a,
+      img {
+        width: 20px;
+        padding: 15px 20px;
+        border-top: 1px solid #333;
+      }
+    }
+
+    #menu-toggle:checked ~ .tub {
+      max-height: 400px;
+    }
+
+    #menu-toggle:checked + .burger {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}

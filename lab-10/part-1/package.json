@@ -7,7 +7,9 @@
     "sass": "sass src/scss:dist/css --watch",
     "pug": "pug src/pug --out dist --pretty --watch",
     "dev": "npm-run-all --parallel sass pug",
-    "build-html": "pug src/pug --out dist --pretty"
+    "build": "npm-run-all build-sass build-pug",
+    "build-sass": "sass src/scss:dist/css --style=compressed --no-source-map",
+    "build-pug": "pug src/pug --out dist --pretty"
   },
   "keywords": [],
   "author": "",

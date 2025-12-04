@@ -1,0 +1,530 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  padding-top: 70px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.card--main {
+  position: relative;
+}
+.card--main .circle {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  width: 40%;
+  aspect-ratio: 1/1;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.card--main .circle .circle-inner {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("../img/Komisar.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.card--main .circle .plus {
+  position: absolute;
+  left: 90%;
+  top: 40%;
+  font-size: 40px;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.card--main:hover .circle {
+  left: 25%;
+  top: 20%;
+  width: 50%;
+}
+.card--main:hover .circle-inner {
+  width: 90%;
+}
+.card--main:hover .plus {
+  transform: rotate(90deg);
+}
+
+.button {
+  background-color: #d25252;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button:hover {
+  background-color: #b44141;
+}
+.button:active {
+  transform: scale(1.05);
+}
+
+header {
+  z-index: 10;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 70px;
+  background: #222;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header .logo img {
+  width: 160px;
+}
+header .tub img {
+  width: 20px;
+}
+header .tub {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+header .tub a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+header .tub a:hover {
+  color: #d25252;
+  transform: scale(1.05);
+}
+header .tub a:active {
+  background: rgba(255, 255, 255, 0.18);
+}
+header .tub a:visited {
+  color: white;
+}
+header .tub img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+header .tub img:hover {
+  transform: scale(1.05);
+}
+header #menu-toggle {
+  display: none;
+}
+header .burger {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  background: transparent;
+  transition: background 0.3s;
+}
+header .burger::before, header .burger::after,
+header .burger .line {
+  content: "";
+  position: absolute;
+  left: 8px;
+  width: 24px;
+  height: 3px;
+  background: white;
+}
+header .burger::before {
+  top: 12px;
+}
+header .burger .line {
+  top: 18px;
+}
+header .burger::after {
+  top: 24px;
+}
+@media (max-width: 768px) {
+  header .burger {
+    display: block;
+  }
+  header .tub {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  header .tub a,
+  header .tub img {
+    width: 20px;
+    padding: 15px 20px;
+    border-top: 1px solid #333;
+  }
+  header #menu-toggle:checked ~ .tub {
+    max-height: 400px;
+  }
+  header #menu-toggle:checked + .burger {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+main .slogan {
+  margin: 50px 0;
+  padding-left: 3%;
+}
+main .slogan p:nth-child(1) {
+  font-size: 35px;
+  letter-spacing: 2px;
+  color: #3e3e3e;
+}
+main .slogan p:nth-child(2) {
+  font-size: 18px;
+  color: #6f6f6f;
+}
+@media (max-width: 1080px) {
+  main .slogan {
+    padding-left: 2%;
+  }
+  main .slogan p:nth-child(1) {
+    font-size: 30px;
+  }
+  main .slogan p:nth-child(2) {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  main .slogan {
+    padding-left: 5%;
+  }
+  main .slogan p:nth-child(1) {
+    font-size: 25px;
+  }
+  main .slogan p:nth-child(2) {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  main .slogan {
+    padding-left: 3%;
+  }
+  main .slogan p:nth-child(1) {
+    font-size: 20px;
+  }
+  main .slogan p:nth-child(2) {
+    font-size: 12px;
+  }
+}
+main .slogan, main .portfolio, main .contacts, main .services, main .journal {
+  color: rgb(111, 111, 111);
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  main .slogan, main .portfolio, main .contacts, main .services, main .journal {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  main .slogan, main .portfolio, main .contacts, main .services, main .journal {
+    padding: 0 10px;
+  }
+}
+main .slogan, main .portfolio, main .contacts, main .services, main .journal {
+  display: flex;
+  flex-direction: column;
+}
+main .portfolio .block-content, main .contacts .block-content, main .services .block-content, main .journal .block-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .slogan {
+  gap: 35px;
+  margin: 90px 0;
+}
+main .portfolio {
+  gap: 20px;
+}
+main .portfolio .block-name {
+  display: flex;
+  justify-content: space-between;
+}
+main .portfolio .block-name p::after {
+  content: " --";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+main .portfolio .block-content .card {
+  flex: 0 1 calc(33.333% - 14px);
+}
+@media (max-width: 768px) {
+  main .portfolio .block-content .card {
+    flex: 0 1 calc(50% - 14px);
+  }
+}
+@media (max-width: 576px) {
+  main .portfolio .block-content .card {
+    flex: 0 1 100%;
+  }
+}
+main .portfolio .block-content .card {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+main .portfolio .block-content .card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+main .contacts {
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 30px;
+}
+main .contacts p {
+  font-size: 30px;
+}
+main .contacts .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 30px;
+}
+main .services {
+  gap: 30px;
+}
+main .services .block-name p {
+  color: rgb(62, 62, 62);
+  font-weight: 700;
+  font-size: 24px;
+}
+main .services .block-name p::after {
+  content: " --";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+main .services .block-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+main .services .block-content .card {
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 calc(25% - 20px);
+}
+@media (max-width: 768px) {
+  main .services .block-content .card {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+@media (max-width: 576px) {
+  main .services .block-content .card {
+    flex: 0 1 100%;
+  }
+}
+main .services .block-content .card {
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+main .services .block-content .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+main .services .block-content .card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+main .services .block-content .card .card-name {
+  color: rgb(62, 62, 62);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .journal {
+  gap: 30px;
+}
+main .journal .block-name p {
+  color: rgb(62, 62, 62);
+  font-weight: 700;
+  font-size: 24px;
+}
+main .journal .block-name p::after {
+  content: " --";
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+main .journal .block-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px 0;
+}
+main .journal .block-content .card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 calc(50% - 15px);
+}
+@media (max-width: 768px) {
+  main .journal .block-content .card {
+    flex: 0 1 100%;
+  }
+}
+main .journal .block-content .card {
+  padding: 8px;
+  text-align: left;
+}
+main .journal .block-content .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+main .journal .block-content .card img {
+  width: 40%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+main .journal .block-content .card .card-discription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 0;
+  max-height: 100%;
+  font-size: 16px;
+}
+main .journal .block-content .card .card-discription .card-discription-date {
+  color: rgba(133, 133, 133, 0.685);
+  margin-bottom: 4px;
+}
+main .journal .block-content .card .card-discription .card-discription-name {
+  color: rgb(62, 62, 62);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+main .journal .block-content .card .card-discription .card-discription-text {
+  color: rgb(111, 111, 111);
+}
+
+footer {
+  background-color: #292929;
+  text-align: center;
+  padding: 30px;
+}
+footer p {
+  color: #858585;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+footer .media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+footer .media img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+footer .media img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+  footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  footer .media {
+    gap: 8px;
+  }
+  footer .media img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

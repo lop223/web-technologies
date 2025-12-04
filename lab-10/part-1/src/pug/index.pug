@@ -5,34 +5,14 @@ include mixins/card.pug
 block content
   // Variables
   - const slogan = "WE'RE KEEPSAKE, A DIGITAL & BRANDING AGENCY"
-  - const description = "Specializing in web design..."
+  - const description = "Specializing in web design, poster, motion video, based in London. We love to turn ideas into beautiful things."
 
   // === DATA ===
-  - var portfolio = [
-  -   { src: 'img/pictures/1.jpeg', main: false },
-  -   { src: 'img/pictures/2.jpeg', main: false },
-  -   { src: 'img/pictures/3.jpeg', main: false },
-  -   { src: 'img/pictures/5.jpeg', main: false },
-  -   { src: 'img/pictures/8.jpeg', main: true },
-  -   { src: 'img/pictures/6.jpeg', main: false },
-  -   { src: 'img/pictures/7.jpeg', main: false },
-  -   { src: 'img/pictures/4.jpeg', main: false },
-  -   { src: 'img/pictures/9.jpeg', main: false }
-  - ]
+  - var portfolio = [{ src: 'img/pictures/1.jpeg', main: false }, { src: 'img/pictures/2.jpeg', main: false }, { src: 'img/pictures/3.jpg', main: false }, { src: 'img/pictures/5.jpeg', main: false }, { src: 'img/pictures/8.jpeg', main: true }, { src: 'img/pictures/6.jpeg', main: false }, { src: 'img/pictures/7.jpeg', main: false }, { src: 'img/pictures/4.webp', main: false }, { src: 'img/pictures/9.jpeg', main: false }]
 
-  - var services = [
-  -   { icon: 'img/icons/web-design.png', title: 'WEB DESIGN', text: 'We create beautiful websites.' },
-  -   { icon: 'img/icons/tv.png', title: 'MOTION VIDEO', text: 'Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.' },
-  -   { icon: 'img/icons/printer.png', title: 'PRINT DESIGN', text: 'Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo.' },
-  -   { icon: 'img/icons/heart.png', title: 'ILLUSTRATION', text: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus.' }
-  - ]
+  - var services = [{ icon: 'img/icons/web-design.png', title: 'WEB DESIGN', text: 'Donec elit non mi porta gravida eureget metus. Aenean eu leo quam. Pellentesque ornare sem por quam venenatis' }, { icon: 'img/icons/tv.png', title: 'MOTION VIDEO', text: 'Aenean lacinia bibendum nulla sed consectetur. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur.' }, { icon: 'img/icons/printer.png', title: 'PRINT DESIGN', text: 'Maecenas sed diam eget risus varius blandit amet non magna. Nullam id dolor id nibh ultricies vehiculaelit praesent commodo.' }, { icon: 'img/icons/heart.png', title: 'ILLUSTRATION', text: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non' }]
 
-  - var journal = [
-  -   { img: 'img/pictures/10.jpg', date: 'OCT 13, 2014 / IDENTITY', name: 'SOLLICITUDIN TORTOR INCEPTOS', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' },
-  -   { img: 'img/pictures/11.jpg', date: 'OCT 23, 2014 / BRANDING', name: 'AMET INCEPTOS FRINGILLA FUSCE', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' },
-  -   { img: 'img/pictures/12.jpeg', date: 'SEP 27, 2014 / BRANDING', name: 'ORNARE CURSUS BIBENDUM PURUS', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' },
-  -   { img: 'img/pictures/13.jpeg', date: 'SEP 19, 2014 / IDENTITY', name: 'CURSUS MALESUADA JUSTO', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' }
-  - ]
+  - var journal = [{ img: 'img/pictures/10.jpg', date: 'OCT 13, 2014 / IDENTITY', name: 'SOLLICITUDIN TORTOR INCEPTOS', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' }, { img: 'img/pictures/11.jpg', date: 'OCT 23, 2014 / BRANDING', name: 'AMET INCEPTOS FRINGILLA FUSCE', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' }, { img: 'img/pictures/12.jpeg', date: 'SEP 27, 2014 / BRANDING', name: 'ORNARE CURSUS BIBENDUM PURUS', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' }, { img: 'img/pictures/13.jpeg', date: 'SEP 19, 2014 / IDENTITY', name: 'CURSUS MALESUADA JUSTO', text: 'Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh.' }]
 
   // === BLOCK 1: Slogan ===
   .slogan
@@ -43,7 +23,6 @@ block content
   .portfolio
     .block-name
       p OUR AWESOME WORKS 
-      span.lines --
       .button FILTER PORTFOLIO
 
     .block-content
@@ -69,8 +48,8 @@ block content
   .services
     .block-name
       p WHAT DO WE DO 
-      span.lines --
-      p Maecenas sed diam eget risus varius...
+
+    p Maecenas sed diam eget risus varius blandit sit amet non magna Morbi leo risus, porta ac consectetur ac, vestibulum at ecos
     
     .block-content
       each item in services
@@ -79,10 +58,8 @@ block content
   // === BLOCK 5: Journal ===
   .journal
     .block-name
-      p FROM THE JOURNAL 
-      span.lines --
-
-    p Cum sociis natoque penatibus…
+      p FROM THE JOURNAL
+    p Cum sociis natoque penatibus montes nastetur radiculus mus Donec Ulimaper cor faer blantre
 
     .block-content
       each post in journal
