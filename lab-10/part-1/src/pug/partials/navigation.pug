@@ -1,0 +1,13 @@
+include ../mixins/nav-item
+
+- const navLinks = ["Home", "About", "Services", "Contact"]
+
+input(type="checkbox" id="menu-toggle")
+label.burger(for="menu-toggle")
+  .line
+
+nav.block-2
+  each item in navLinks
+    +navItem(item)
+
+  img(src="../img/icons/heart.png", alt="Profile")

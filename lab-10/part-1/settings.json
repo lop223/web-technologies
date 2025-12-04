@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.pug": "pug"
+    },
+
+    "editor.formatOnSave": true,
+
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[pug]": {
+        "editor.defaultFormatter": "mrmlnc.vscode-pugbeautify",
+        "editor.formatOnSave": true
+    },
+
+    "pretty-pug.printWidth": 80,
+    "pretty-pug.useTabs": false,
+    "pretty-pug.tabWidth": 2,
+    "pretty-pug.singleQuote": true
+}
